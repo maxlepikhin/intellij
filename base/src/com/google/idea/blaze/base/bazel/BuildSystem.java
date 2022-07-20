@@ -74,6 +74,9 @@ public interface BuildSystem {
 
     /** Returns a {@link BlazeCommandRunner} to be used to invoke the build. */
     BlazeCommandRunner getCommandRunner();
+
+    /** Indicates whether the invoker supports user .blazerc from home directories. */
+    boolean getSupportsHomeBlazerc();
   }
 
   /** Returns the type of the build system. */

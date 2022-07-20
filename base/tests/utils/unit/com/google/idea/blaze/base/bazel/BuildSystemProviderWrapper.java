@@ -231,6 +231,11 @@ public class BuildSystemProviderWrapper implements BuildSystemProvider {
     public BlazeCommandRunner getCommandRunner() {
       return inner.getCommandRunner();
     }
+
+    @Override
+    public boolean getSupportsHomeBlazerc() {
+      return true;
+    }
   }
 
   class BuildSystemWrapper implements BuildSystem {

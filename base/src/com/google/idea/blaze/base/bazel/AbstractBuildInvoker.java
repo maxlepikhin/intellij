@@ -148,4 +148,9 @@ public abstract class AbstractBuildInvoker implements BuildInvoker {
             WorkspaceRoot.fromProject(project),
             syncFlags);
   }
+
+  @Override
+  public boolean getSupportsHomeBlazerc() {
+    return true;
+  }
 }

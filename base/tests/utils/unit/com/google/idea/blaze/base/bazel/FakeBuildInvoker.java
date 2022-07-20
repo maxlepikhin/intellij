@@ -34,6 +34,7 @@ public abstract class FakeBuildInvoker implements BuildInvoker {
         .type(BuildBinaryType.NONE)
         .binaryPath("")
         .supportsParallelism(false)
+        .supportsHomeBlazerc(true)
         .buildResultHelperSupplier(() -> null);
   }
 
@@ -88,6 +89,8 @@ public abstract class FakeBuildInvoker implements BuildInvoker {
     public abstract Builder buildResultHelperSupplier(Supplier<BuildResultHelper> supplier);
 
     public abstract Builder commandRunner(BlazeCommandRunner runner);
+
+    public abstract Builder supportsHomeBlazerc(boolean value);
   }
 
 }
