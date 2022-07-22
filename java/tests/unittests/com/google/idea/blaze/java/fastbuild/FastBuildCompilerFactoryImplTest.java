@@ -341,8 +341,7 @@ public final class FastBuildCompilerFactoryImplTest {
     return CompileInstructions.builder()
         .outputDirectory(outputDirectory.toFile())
         .filesToCompile(ImmutableList.of(javaFile.toFile()))
-        .classpath(ImmutableList.copyOf(classpath))
-        .outputWriter(javacOutput);
+        .classpath(ImmutableList.copyOf(classpath));
   }
 
   private Path createJavaFile(String java) throws IOException {
